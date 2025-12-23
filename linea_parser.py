@@ -83,7 +83,7 @@ def parsear_bloco_saldos(texto_bruto: str) -> list[dict]:
     texto_filtrado = []
     contas = [] 
 
-    MARCADOR_INICIO = "Resumo Financeiro Contábil Saldo anterior Créditos Débitos Saldo atual"
+    MARCADOR_INICIO = "Resumo Financeiro Contábil"
     MARCADOR_FIM = "TOTAL"
     
     # Regex para capturar os 4 valores no formato BR (opcionalmente negativo) no final da linha
@@ -1338,6 +1338,7 @@ def parsear_cotas_em_aberto(texto_bruto: str) -> Dict[str, Any]:
             continue        
 
     return (cotas_em_aberto, texto_filtrado)
+
 
 
 
