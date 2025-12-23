@@ -1176,8 +1176,8 @@ def parsear_salao_de_festas(texto_bruto: str) -> Tuple[Dict[str, Any], str]:
     # --- Lógica Principal (Coordenador) ---
 
     MARCADOR_BLOCO_PRINCIPAL = "SALÃO DE FESTAS"
-    MARCADOR_RESUMO_INICIO = "Resumo de Emissões Colunado RealizadoPrevisto"
-    MARCADOR_POSICAO_INICIO = "Posição Financeira CréditoDébito"
+    MARCADOR_RESUMO_INICIO = "Resumo de Emissões Colunado"
+    MARCADOR_POSICAO_INICIO = "Posição Financeira"
 
     start_index = -1
     
@@ -1338,6 +1338,7 @@ def parsear_cotas_em_aberto(texto_bruto: str) -> Dict[str, Any]:
             continue        
 
     return (cotas_em_aberto, texto_filtrado)
+
 
 
 
