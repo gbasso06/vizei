@@ -48,6 +48,7 @@ def remover_headers(texto_bruto: str, string_identificadora:str) -> str:
     
     # Marcador de início do bloco de cabeçalho
     MARCADOR_INICIO = "RelatDemonCroAntes" 
+    MARCADOR_INICIO_2 = "PRESTAÇÃO DE CONTAS"
     # Marcador de fim do bloco de cabeçalho
     MARCADOR_FIM = string_identificadora 
     
@@ -57,7 +58,7 @@ def remover_headers(texto_bruto: str, string_identificadora:str) -> str:
         linha_limpa = linha.strip()
         
         # 1. Detecta o início de um bloco de cabeçalho
-        if MARCADOR_INICIO in linha_limpa:
+        if (MARCADOR_INICIO in linha_limpa) | (MARCADOR_INICIO_2 in linha_limpa):
             dentro_header = True
             continue # Não adiciona a linha de início
             
@@ -1338,9 +1339,6 @@ def parsear_cotas_em_aberto(texto_bruto: str) -> Dict[str, Any]:
             continue        
 
     return (cotas_em_aberto, texto_filtrado)
-
-
-
 
 
 
